@@ -5,10 +5,10 @@ package String_Manipulation;
 
 import java.util.Scanner;
 
-public class CapitalizeFirstAndLast {
+public class DistrictNameCharacterCapitalization {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("Give the input: ");
+        System.out.println("Give the input as String: ");
         String str=sc.next();
         String firstChar=String.valueOf(str.charAt(0)).toUpperCase();
         int inBetweenCharsLength=str.length()-2;
