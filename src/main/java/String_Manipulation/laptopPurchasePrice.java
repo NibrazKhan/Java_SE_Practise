@@ -10,11 +10,17 @@ public class laptopPurchasePrice {
                 "Press y for purchase\n" +
                 "n for not purchasing");
         Scanner sc=new Scanner(System.in);
+        String str="Core i 7 HP laptop price is 76000 tk and cash payment discount 10%";
+        str=str.replaceAll("[^\\d]"," ");
+        str=str.trim();
+        str=str.replaceAll("\\s+"," ");
+        String[]splittingPrice=str.split(" ");
+//        System.out.println(str);
         char input=sc.next().charAt(0);
         if(input=='y') {
 
-            int laptopPrice = 76000;
-            double discount = 10.0 / 100.0;
+            int laptopPrice = Integer.parseInt(splittingPrice[1]);
+            double discount = Integer.parseInt(splittingPrice[2]) / 100.0;
             double purchasePrice = (laptopPrice - (laptopPrice * discount));
             System.out.println("Purchase Price: " + purchasePrice);
         }
